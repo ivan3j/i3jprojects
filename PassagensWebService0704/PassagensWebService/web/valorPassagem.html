@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+
+<script>
+import="modelo.Rotas"
+import="java.util.List";
+import="java.util.ArrayList";
+ArrayList<Rotas> rotas = new ArrayList();
+rotas= (ArrayList)request.getAttribute("listarotas");
+origem=request.getAttribute("origem");
+    
+</script>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Valor da Passagem</title>       
+    </head>
+    <body>
+        <form name="frm" method="post" action="DirecionaFuncionsServLet">
+            <table width="60%" align="center" >
+                <tr>
+                    <th colspan="2">Valor da Passagem</th>
+                </tr>
+                
+                <tr>
+            
+            <td><%=origem %></td> 
+            <td><%=pedidos.get(i).getDataVenda() %></td> 
+                       
+        </tr>
+                
+                <tr height="30px"> 
+                <td><input type="radio" value="valor2" name="valor" checked></td>                     
+                <td>Saida: 08:00</td>
+                <td>Chegada: 10:00</td>
+                <td>R$400,00</td>
+                <td>Azul</td>
+                </tr>
+                
+                <tr height="30px"> 
+                <td><input type="radio" value="valor3" name="valor"></td>                     
+                <td>Saida: 13:00</td>
+                <td>Chegada: 15:10</td>
+                <td>R$425,00</td>
+                <td>Azul</td>
+                </tr>
+				
+				<tr height="30px"> 
+                <td><input type="radio" value="valor1" name="valor"> </td>                     
+                <td>Saida: 21:50</td>
+                <td>Chegada: 23:10</td>
+                <td>R$450,00</td>
+                <td>Azul</td>
+                </tr>
+			
+                </table>    
+		
+		
+        <div align="center">
+                    <input type="submit" name="comprar"  value="Comprar">
+                    </div>
+       
+	   
+            <div align="center">
+       				<a href="TelaPrincipal.html">VOLTAR</a>
+       			
+				</div> 
+
+	</form>
+		
+    </body>
+</html>

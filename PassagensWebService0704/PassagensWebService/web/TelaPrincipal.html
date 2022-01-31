@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+
+    
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Venda de Passagem</title>       
+    </head>
+    <body>
+        <form name="venda" method="POST" action="ControlePassagensServlet">
+            <table width="60%" align="center" >
+                <tr>
+                    <th colspan="2">Escolha sua Rota</th>
+                </tr>
+                <tr> 
+                <td height="50px">Cidade Origem</td>
+                </tr>
+                <tr>                    
+                    <td><select name="origem" style="width: 400px">
+					<option value="BeloHorizonte">Belo Horizonte</option>
+					<option value="SaoPaulo">São Paulo</option>
+					<option value="RioJaneiro">Rio de Janeiro</option>
+					</select></td>
+                </tr>
+                <tr>
+                    <td height="50px">Cidade Destino</td>
+                </tr>
+                <tr>
+                    <td><select name="destino" style="width: 400px">
+					<option value="RioJaneiro">Rio de Janeiro</option>
+					<option value="SaoPaulo">São Paulo</option>
+					<option value="BeloHorizonte">Belo Horizonte</option>
+					</select></td>
+                </tr>
+                <tr>
+                    <td height="50px">Data Ida</td>
+               </tr>
+                <tr>                    
+                    <td><input type="text" name="dataida" required="" size="10" style="text-transform:none" maxlength="10" OnKeyPress="formatar('##/##/####', this)"></td>                 
+                </tr>
+             <tr>
+                    <td height="50px">Data Volta</td>
+               </tr>
+                <tr>                    
+                    <td><input type="text" name="datavolta" required="" size="10" style="text-transform:none" maxlength="10" OnKeyPress="formatar('##/##/####', this)"></td>                 
+                </tr>
+                <tr>
+                    <td colspan="2" >
+                        <div align="center">
+                            <input type="reset" value="Limpar">
+                            <input type="submit" name="Procurar"  value="Procurar" onclick="procurar()">
+                        </div>
+                        
+                    </td>
+                </tr>
+            </table>
+        </form>
+        
+        <script>
+function formatar(mascara, documento){
+  var i = documento.value.length;
+  var saida = mascara.substring(0,1);
+  var texto = mascara.substring(i)
+  
+  if (texto.substring(0,1) != saida){
+            documento.value += texto.substring(0,1);
+  }
+  
+}
+</script>
+<?php
+if (isset($_COOKIE['count'])) {
+    $count = $_COOKIE['count'] + 1;
+} else {
+    $count = 1;
+}
+?>
+
+
+    </body>
+</html>

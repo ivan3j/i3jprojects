@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <listener>
+        <listener-class>com.sun.xml.ws.transport.http.servlet.WSServletContextListener</listener-class>
+    </listener>
+    <servlet>
+        <servlet-name>CalculadoraWS</servlet-name>
+        <servlet-class>com.sun.xml.ws.transport.http.servlet.WSServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet>
+        <servlet-name>ControlePassagensServlet</servlet-name>
+        <servlet-class>br.com.posestacio.soa.servlet.ControlePassagensServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DadosExternosServlet</servlet-name>
+        <servlet-class>br.com.posestacio.soa.servlet.DadosExternosServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CalculadoraWS</servlet-name>
+        <url-pattern>/CalculadoraWS</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ControlePassagensServlet</servlet-name>
+        <url-pattern>/ControlePassagensServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DadosExternosServlet</servlet-name>
+        <url-pattern>/DadosExternosServlet</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>

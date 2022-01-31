@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+
+<script>
+import="Entities.Pedido";
+import="java.util.List";
+import="java.util.ArrayList";
+
+ArrayList<Pedido> pedidos = new ArrayList();
+   pedidos= (ArrayList)request.getAttribute("listaPedidos");
+   
+        
+  
+</script>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Valor da Passagem</title>       
+    </head>
+    <body>
+        <form name="frm" method="POST" action="">
+            <table width="60%" align="center" >
+						
+			<tr>
+			<td height="100px">COMPRA EFETUDA COM SUCESSO.</td>
+			</tr>
+			
+			<tr>
+			<td>Reserve o Hotel:</td>
+			</tr>
+			
+			<tr>
+			<td><select name="hotel" style="width: 400px">
+					<option value=""> </option>
+					<option value=""></option>
+					<option value=""></option>
+					</select></td>
+			</tr>
+			
+			<tr>
+			<td>Reserve seu veiculo:</td>
+			</tr>
+			
+			<tr>
+			<td><select name="carro" style="width: 400px">
+					<option value=""></option>
+					<option value=""></option>
+					<option value=""></option>
+					</select></td>
+			</tr>
+			
+		</table>
+	   
+            <div align="center">
+       				<a href="TelaPrincipal.html">VOLTAR</a>
+       			
+				</div> 
+	</form>
+		
+    </body>
+</html>
