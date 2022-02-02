@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Cadastro de Clientes</title>
+        <style type="text/css">
+            td {text-transform: capitalize}
+        </style>
+    </head>
+    <body>
+        <form name="cadastro" action="CadastrarOrdemServlet" method="post">
+            <table width="60%" align="center" >
+                <tr>
+                    <th colspan="2">Cadastrar Ordem de fabricação</th>
+                </tr>
+                <tr>
+                    <td>Numero do Pedido:</td>
+                    <td>
+                        <select name="pedido" >
+                        <option>Pedido 1</option>
+                        <option>Pedido 2</option>
+                        <option>Pedido 3</option>
+                        <option>Pedido 4</option>
+                        </select>
+                       
+                               
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td colspan="2" >
+                        <div align="center">
+                            <input type="reset" value="Limpar">
+                            <input type="submit" name="salvar"  value="salvar">
+                        </div>
+                        <div align="center">
+                            <a href="LogoutServlet">Logout</a>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>
+

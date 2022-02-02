@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Cadastro de Clientes</title>
+        <style type="text/css">
+            td {text-transform: capitalize}
+        </style>
+    </head>
+    <body>
+        <form name="cadastro" action="CadastrarPedidoServlet" method="post">
+            <table width="60%" align="center" >
+                <tr>
+                    <th colspan="2">Cadastrar Pedido</th>
+                </tr>
+               
+                <tr>
+                    <td>Nome do Cliente:</td>
+                    <select name="nomecliente">
+                    <option>Cliente 1</option>
+                    <option>Cliente 2</option>
+                    <option>Cliente 3</option>
+                    <option>Cliente 4</option>
+                    </select>
+                    
+                </tr>
+                <tr>
+                    <td>Data da venda:</td>
+                    <td><input type="text" name="datavenda" size="20" style="text-transform:none" ></td>
+                </tr>
+                <tr>
+                    <td>Quantidade de Chips:</td>
+                    <td><input type="text" name="qtdechips" size="60" maxlength="60"></td>
+                </tr>
+                <tr>
+                    <td>Vendedor:</td>
+		    <td><input type="text" name="vendedor" size="20" style="text-transform:none" ></td>
+                </tr>
+                <tr>
+                    <td>Valor da Venda:</td>
+		    <td><input type="text" name="valor" size="20" style="text-transform:none" ></td>
+                </tr>
+                <tr>
+                    <td colspan="2" >
+                        <div align="center">
+                            <input type="reset" value="Limpar">
+                            <input type="submit" name="salvar"  value="salvar">
+                        </div>
+                        <div align="center">
+                            <a href="LogoutServlet">Logout</a>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>
+

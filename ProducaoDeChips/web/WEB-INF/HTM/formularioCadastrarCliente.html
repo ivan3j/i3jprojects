@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Cadastro de Clientes</title>
+        <style type="text/css">
+        </style>
+    </head>
+    <body>
+        <form name="cadastro" method="POST" action="CadastrarClienteServlet">
+            <table width="60%" align="center" >
+                <tr>
+                    <th colspan="2">Cadastro de Clientes</th>
+                </tr>
+                <tr>
+                    <td>Cliente:</td>
+                    <td><input type="text" name="nome" size="60" style="text-transform:none" ></td>
+                </tr>
+                <tr>
+                    <td>CNPJ:</td>
+                    <td><input type="text" name="cnpj" size="60" style="text-transform:none"></td>
+                 
+                </tr>
+                    <td>CPF:</td>
+                    <td><input type="text" name="cpf" size="60" style="text-transform:none"></td>
+                 
+                </tr>
+                <tr>
+                    <td>Logradouro:</td>
+                    <td><input type="text" name="logradouro" size="60" style="text-transform:none"></td>
+                 
+                </tr>
+             
+                <tr>
+                    <td colspan="2" >
+                        <div align="center">
+                            <input type="reset" value="Limpar">
+                            <input type="submit" name="Salvar"  value="Salvar">
+                        </div>
+                        <div align="center">
+                            <a href="LogoutServlet">Logout</a>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>
